@@ -1,0 +1,12 @@
+    user_chose = None
+    @staticmethod
+    def __user_choice():
+        """Ask the user what is the choice doing"""
+        Critters.user_chose = False
+        while not Critters.user_chose:
+            user_choice = input("Ваш выбор: ")
+            if user_choice in ("0","1","2","3"):
+                Critters.user_chose = True
+            else:
+                continue
+        return Critters.user_chose
